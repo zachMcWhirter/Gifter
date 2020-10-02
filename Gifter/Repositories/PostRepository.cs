@@ -390,7 +390,7 @@ namespace Gifter.Repositories
                     }
 
                     cmd.CommandText = sql;
-                    DbUtils.AddParameter(cmd, "@Criterion", $"%{criterion}%");
+                    DbUtils.AddParameter(cmd, "@Criterion", criterion);
                     var reader = cmd.ExecuteReader();
 
                     var posts = new List<Post>();
